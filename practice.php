@@ -20,7 +20,8 @@ $array_month =[
     "Nobember" => "11月",
     "December" => "12月"
     ];
-    
+
+// 8月を表示
 echo $array_month["August"];
 
 $hello = "Hello,";
@@ -31,6 +32,7 @@ echo $hello,$name,$world;
 
 $tech_boost = "tech";
 $tech_boost .= "_boost";
+
 echo $tech_boost;
 
 $calendar_2018 = [

@@ -6,7 +6,7 @@
 // １.$name にあなたの名前を代入し、 if文で $name があなたの名前だったら 「私は あなたの名前 です」、
 // もし違ったら「あなたの名前ではありません」と表示するように実装してください
 $name = "Satoko Harada";
-if ($name = "Satoko Harada") {
+if ($name == "Satoko Harada") {
   echo "私は{$name}です。";
 } else {
   echo "私は{$name}ではありません。";
@@ -15,7 +15,7 @@ if ($name = "Satoko Harada") {
 
 // ２.for文を使って、1から10000までの合計の値を表示してください
 $number = 0;
-for ($i = 0; $i <= 1000; $i++){
+for ($i = 1; $i <= 1000; $i++){
   $number += $i;
 }
 echo $number;
@@ -38,6 +38,7 @@ for($i = $start; $i <= $end; $i++){
   // 5で割り切れたら{}内を実行する
   if($i % 5 == 0){
     echo $i;
+    echo "\n";
   }
 }
 ?>

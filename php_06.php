@@ -24,30 +24,29 @@ echo add(10,2);
 $arr = [1, 3, 5, 7, 9];
 echo "product(arr) = " . array_product($arr) . "\n";
 
-$arr = [1, 3, 5, 7, 9];
-$result = $arr[0];
-for ($i = 1; $i < count($arr); $i++){
-    $result *= $arr[$i];
+function arr_product($arr){
+    $result = $arr[0];
+    for ($i = 1; $i < count($arr); $i++){
+        $result *= $arr[$i];
+    }
+    return $result;
 }
-echo $result;
+echo arr_product([1,3,5,7,9]);
 echo "\n";
 
 
 // ４.【応用】　下記のプログラムは、配列の中で1番大きい値を返す max_array という関数を実装しようとしています。
 // 途中の部分を完成させてください
-$arr = [1, 4, 5, 3, 8];
-  // とりあえず配列の最初の要素を一番大きい値とする
-$max_number = $arr[0];
-    // ここで配列の中の1番大きい値を探したい
-    for ($i = 1; $i < count($arr); $i++){
-        if($max_number < $arr[$i]){
-            $max_number = $arr[$i];
-        }
-    }
-echo $max_number;
-echo "\n";
+// function max_array($arr){
+//   // とりあえず配列の最初の要素を一番大きい値とする
+//   $max_number = $arr[0];
+//   foreach($arr as $a){
+//     // ここで配列の中の1番大きい値を探したい
+//   }
 
-$arr = [1, 4, 5, 3, 8];
+//   return $max_number;
+// }
+
 function max_array($arr){
     $max_number = $arr[0];
     foreach($arr as $a) {
@@ -57,8 +56,9 @@ function max_array($arr){
     }
     return $max_number;
 }
-echo $max_number;
+echo max_array([1,4,5,3,8]);
 echo "\n";
+
 
 // ５.下記のビルトイン関数の用途、使い方を調べて実際に使ってみてください
 // strip_tags
